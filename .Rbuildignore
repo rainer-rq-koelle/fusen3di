@@ -1,1 +1,7 @@
 ^dev$
+^LICENSE\.md$
+^fusen3di\.Rproj$
+^\.Rproj\.user$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

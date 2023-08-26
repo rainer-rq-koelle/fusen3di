@@ -1,0 +1,19 @@
+Package: fusen3di
+Title: Trajectory Processing For The 3Di Use Case
+Version: 0.0.0.9000
+Authors@R: 
+    person(, "Performance Review Unit", , "pru-support@eurocontrol.int", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0000-0000-0000"))
+Description: Functions for processing Opensky Network Open ADSB data to
+    support the Borealis 3Di Use Case analysis.
+License: MIT + file LICENSE
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: 
+    knitr
+Config/fusen/version: 0.5.1
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3

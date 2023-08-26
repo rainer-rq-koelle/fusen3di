@@ -1,0 +1,85 @@
+---
+title: "flat_xsquare.Rmd empty"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r development, include=FALSE}
+library(testthat)
+```
+
+```{r development-load}
+# Load already included functions if relevant
+pkgload::load_all(export_all = FALSE)
+```
+
+# xsquare
+
+```{r function-xsquare}
+#' Return square of value
+#'
+#' @param .value numerical input
+#' @return squeared result
+#' @export
+#'
+#' @examples
+xsquare <- function(.value) {
+  .value^2
+}
+```
+
+```{r examples-xsquare}
+xsquare(4)
+xsquare(-2)
+```
+
+```{r tests-xsquare}
+test_that("xsquare works", 
+  {
+    expect_equal(xsquare(4), 16)
+    expect_equal(xsquare(-2), 4)
+    }
+)
+```
+
+
+# xcubic
+
+This function returns the cube of the input value, e.g. x^3.   
+Given x = 2, x^3^ = 2^3^ = 8.
+
+```{r function-xcubic}
+#' Return cubic of input value
+#' 
+#' cubes the input value
+#' 
+#' @param .value numerical input
+#' @return cubed result of input
+#' 
+#' @export
+xcubic <- function(.value){
+    .value^3
+}
+```
+  
+```{r example-xcubi}
+xcubic(2)
+```
+  
+```{r tests-xcubi}
+test_that("xcubi works", {
+  expect_true(inherits(xcubic, "function"))
+  expect_equal(xcubic(3), 27)
+})
+```
+  
+
+
+
+```{r development-inflate, eval=FALSE}
+# Run but keep eval=FALSE to avoid infinite loop
+# Execute in the console directly
+fusen::inflate(flat_file = "dev/flat_xsquare.Rmd", vignette_name = "Some functions")
+```
+

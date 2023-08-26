@@ -1,0 +1,30 @@
+flat_teaching.Rmd:
+  path: dev/flat_teaching.Rmd
+  state: active
+  R: R/add_one.R
+  tests: tests/testthat/test-add_one.R
+  vignettes: vignettes/get-started.Rmd
+  inflate:
+    flat_file: dev/flat_teaching.Rmd
+    vignette_name: Get started
+    open_vignette: true
+    check: true
+    document: true
+    overwrite: ask
+flat_xsquare.Rmd:
+  path: dev/flat_xsquare.Rmd
+  state: active
+  R:
+  - R/xcubic.R
+  - R/xsquare.R
+  tests:
+  - tests/testthat/test-xsquare.R
+  - tests/testthat/test-xcubic.R
+  vignettes: vignettes/some-functions.Rmd
+  inflate:
+    flat_file: dev/flat_xsquare.Rmd
+    vignette_name: Some functions
+    open_vignette: true
+    check: true
+    document: true
+    overwrite: ask
